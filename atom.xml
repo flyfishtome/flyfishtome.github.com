@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[flyfishtome]]></title>
+  <subtitle><![CDATA[done is better than perfect]]></subtitle>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com"/>
+  <updated>2013-07-12T09:27:50.971Z</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Mr.Rich]]></name>
+    <email><![CDATA[flyfishtome@gmail.com]]></email>
+  </author>
+  <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[Sublime Text 2-Emmet]]></title>
+    <link href="http://yoursite.com/2013/07/01/sublime-text-2-emmet/"/>
+    <id>http://yoursite.com/2013/07/01/sublime-text-2-emmet/</id>
+    <published>2013-06-30T16:00:00.000Z</published>
+    <updated>2013-07-10T09:05:30.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>快捷设置</strong></p>
+<p><code>Ctrl+E</code> or <code>Tab</code> <em>Expand Abbreviation</em> 展开缩写</p>
+<p><code>Ctrl+,</code> <em>Match Pair Outward</em> 匹配对向外</p>
+<p><code>Ctrl+Shift+0</code> <em>Match Pair Inward</em> 匹配对向内</p>
+<p><code>Ctrl+Alt+j</code> <em>Go to Matching Pair</em> 转到匹配的对</p>
+<p><code>Ctrl+G</code> <em>Wrap With Abbreviation</em> 嵌套代码</p>
+<p><code>Ctrl+Alt+→</code> or <code>Ctrl+Alt+←</code> <em>Go to Edit Point</em> 转到编辑点</p>
+<p><code>Ctrl+Alt+.</code> or <code>Ctrl+Alt+,</code> <em>Select Item</em> 选择项</p>
+<p><code>Ctrl+Shift+/</code> <em>Toggle Comment</em> 添加注释</p>
+<p><code>Shift+Ctrl+` </code> <em>Split/Join Tag</em> 分离并加入标签</p>
+<p><code>shift+ctrl+;</code> <em>Remove Tag</em> 移除标签</p>
+<p><code>Ctrl+J</code> <em>Merge Lines</em> 合并行</p>
+<p><code>Ctrl+U</code> <em>Update Image Size</em> 更新图像尺寸</p>
+<p><code>Shift+Ctrl+Y</code> <em>Evaluate Math Expression</em> 计算数学表达式</p>
+<a name="more"></a>
+
+<p><code>Ctrl+↑</code> <code>Ctrl+↓</code> <code>Alt+↑</code> <code>Alt+↓</code> <code>Ctrl+Alt+↑</code> <code>Ctrl+Alt+↓</code> <em>Increment/Decrement Number</em> 增量 / 减量数字</p>
+<p><code>Shift+Ctrl+r</code> <em>Reflect CSS Value</em> 反射 CSS 值</p>
+<p><code>Ctrl+&#39;</code> <em>Encode/Decode Image to data:URL</em> 转化成 data:URL</p>
+<p><strong>过滤器</strong></p>
+]]></content>
+    <category scheme="http://yoursite.com/tags/sublime/" term="sublime"/>
+    <category scheme="http://yoursite.com/tags/emmet/" term="emmet"/>
+    <category scheme="http://yoursite.com/categories/tools/" term="tools"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Sublime Text 2]]></title>
+    <link href="http://yoursite.com/2013/06/30/sublime-text-2/"/>
+    <id>http://yoursite.com/2013/06/30/sublime-text-2/</id>
+    <published>2013-06-30T12:56:27.000Z</published>
+    <updated>2013-07-12T09:16:25.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>默认快捷</strong></p>
+<p><code>Ctrl+Shift+P</code>   打开命令面板 11</p>
+<p><code>Ctrl+P</code>    搜索项目中的文件</p>
+<p><code>Ctrl+L</code>    选择整行 (按住 - 继续选择下行)</p>
+<p><code>Ctrl+G</code>       跳转到第几行</p>
+<p><code>Ctrl+KK</code>    从光标处删除至行尾</p>
+<p><code>Ctrl+Shift+K</code>    删除整行</p>
+<p><code>Ctrl+Shift+D</code>    复制光标所在整行，插入在该行之前</p>
+<p><code>Ctrl+J</code>    合并行 (已选择需要合并的多行时)</p>
+<p><code>Ctrl+KU</code>    改为大写</p>
+<p><code>Ctrl+KL</code>    改为小写</p>
+<p><code>Ctrl+D</code>    选词 (按住 - 继续选择下个相同的字符串)</p>
+<p><code>Ctrl+M</code>    光标移动至括号内开始或结束的位置</p>
+<p><code>Ctrl+Shift+M</code>    选择括号内的内容 (按住 - 继续选择父括号)</p>
+<a name="more"></a>
+
+<p><code>Ctrl+/</code>    注释整行 (如已选择内容，同“Ctrl+Shift+/”效果)</p>
+<p><code>Ctrl+Shift+/</code>    注释已选择内容</p>
+<p><code>Ctrl+Space</code>    自动完成 (win 与系统快捷键冲突，需修改)</p>
+<p><code>Ctrl+Z</code>    撤销</p>
+<p><code>Ctrl+Y</code>    恢复撤销</p>
+<p><code>Ctrl+Shift+V</code>    粘贴并自动缩进 (其它兄弟写的，实测 win 系统自动缩进无效)</p>
+<p><code>Ctrl+M</code>    光标跳至对应的括号</p>
+<p><code>Alt+.</code>    闭合当前标签</p>
+<p><code>Ctrl+Shift+A</code>    选择光标位置父标签对儿</p>
+<p><code>Ctrl+Shift+[</code>    折叠代码</p>
+<p><code>Ctrl+Shift+]</code>    展开代码</p>
+<p><code>Ctrl+KT</code>    折叠属性</p>
+<p><code>Ctrl+KO</code>    展开所有</p>
+<p><code>Ctrl+U</code>    软撤销 <a href="http://www.sublimetext.com/forum/viewtopic.php?f=2&amp;t=641">1</a>,<a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
+<blockquote>
+<p>软撤销:soft_undo</p>
+<p>Undoes each action stepping through granular edits. </p>
+<p>先移动到编辑位置再进行撤销操作。</p>
+</blockquote>
+<p><code>Ctrl+Shift+U</code> 软重做 <a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
+<blockquote>
+<p>软重做:soft_redo </p>
+<p>Redoes each action stepping through granular edits. </p>
+<p>先移动到编辑位置再进行重做操作。</p>
+</blockquote>
+<p><code>Ctrl+T</code>    词互换</p>
+<p><code>Ctrl+Enter</code>    插入行后</p>
+<p><code>Ctrl+Shift Enter</code>    插入行前</p>
+<p><code>Ctrl+K Backspace</code>    从光标处删除至行首</p>
+<p><code>Ctrl+Shift+UP</code>    与上行互换</p>
+<p><code>Ctrl+Shift+DOWN</code>    与下行互换</p>
+<p><code>Shift+Tab</code>    去除缩进</p>
+<p><code>Tab</code>    缩进</p>
+<p><code>F9</code>    行排序 (按 a-z)</p>
+<h2>常用插件</h2>
+<p><strong><a href="http://emmet.io">Emmet</a></strong>:HTML 编辑神器</p>
+<p><strong><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></strong>: 快速编写 javaScript 注释</p>
+<p><strong><a href="http://wbond.net/sublime_packages/prefixr">Prefixr</a></strong>: 写 CSS 可自动添加 -webkit 等私有词缀</p>
+<p><strong><a href="https://github.com/rmaksim/Sublime-Text-2-Goto-CSS-Declaration">Goto-CSS-Declaration</a></strong>: 导航 CSS 定义位置</p>
+<p><strong><a href="http://wbond.net/sublime_packages/alignment">Alignment</a></strong>: 代码对齐</p>
+<p><strong><a href="http://csscomb.com">CSScomb</a></strong>:CSS 格式化</p>
+<p><strong><a href="https://github.com/SublimeText/Tag">Tag</a></strong>:HTML 格式化</p>
+<p><strong><a href="https://github.com/jdc0589/JsFormat">JsFormat</a></strong>:javaScript 格式化</p>
+<p><strong><a href="https://github.com/dzhibas/SublimePrettyJson">Pretty JSON</a></strong>:JSON 格式化</p>
+<p><strong><a href="https://github.com/kemayo/sublime-text-2-clipboard-history">Clipboard History</a></strong>: 剪切板历史</p>
+<p><strong><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBarEnhancements</a></strong>: 侧栏右键功能增强</p>
+<p><strong><a href="https://github.com/atadams/Hex-to-HSL-Color">Hex-to-HSL-Color-Converter</a></strong>: 自动转换颜色值，从 16 进制到 HSL 格式</p>
+]]></content>
+    <category scheme="http://yoursite.com/tags/sublime/" term="sublime"/>
+    <category scheme="http://yoursite.com/categories/tools/" term="tools"/>
+  </entry>
+</feed>
