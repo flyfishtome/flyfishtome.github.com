@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sublime Text 2 | flyfishtome</title>
+  <title>mac使用git／github | flyfishtome</title>
   <meta name="author" content="Mr.Rich">
   
   <meta name="description" content="The front-end development site">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Sublime Text 2"/>
+  <meta property="og:title" content="mac使用git／github"/>
   <meta property="og:site_name" content="flyfishtome"/>
 
   
@@ -71,79 +71,97 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-06-30T12:56:27.000Z"><a href="/2013/06/30/sublime-text-2/">6月 30 2013</a></time>
+        <time datetime="2013-08-11T13:50:25.000Z"><a href="/2013/08/11/mac下安装git/">8月 11 2013</a></time>
       
       
   
-    <h1 class="title">Sublime Text 2</h1>
+    <h1 class="title">mac使用git／github</h1>
   
 
     </header>
     <div class="entry">
       
-        <p><strong>默认快捷</strong></p>
-<p><code>Ctrl+Shift+P</code>   打开命令面板 11</p>
-<p><code>Ctrl+P</code>    搜索项目中的文件</p>
-<p><code>Ctrl+L</code>    选择整行 (按住 - 继续选择下行)</p>
-<p><code>Ctrl+G</code>       跳转到第几行</p>
-<p><code>Ctrl+KK</code>    从光标处删除至行尾</p>
-<p><code>Ctrl+Shift+K</code>    删除整行</p>
-<p><code>Ctrl+Shift+D</code>    复制光标所在整行，插入在该行之前</p>
-<p><code>Ctrl+J</code>    合并行 (已选择需要合并的多行时)</p>
-<p><code>Ctrl+KU</code>    改为大写</p>
-<p><code>Ctrl+KL</code>    改为小写</p>
-<p><code>Ctrl+D</code>    选词 (按住 - 继续选择下个相同的字符串)</p>
-<p><code>Ctrl+M</code>    光标移动至括号内开始或结束的位置</p>
-<p><code>Ctrl+Shift+M</code>    选择括号内的内容 (按住 - 继续选择父括号)</p>
+        <h3>安装 <code>git</code></h3>
+<p>注意：如果 mac 安装了 Xcode，会默认安装 git。</p>
+<p>一般来说，建议用 brew 安装（方便维护 git 版本及更新）：</p>
+<p><code>brew install git</code></p>
+<p>这样系统里面就会存在两个版本的 git 了，系统默认使用哪个版本，跟你的环境变量设置有关系，可以通过修改变量来指定需要使用的版本，如下：</p>
+<p>打开<code>~/.bash_profile</code>, 加入以下内容：</p>
+<p><code>export PATH=/usr/local/bin:${PATH}</code></p>
+<p>这样就可以让 bash 优先查找<code>/usr/local</code>下的指令，而且不会覆盖老文件。</p>
+<p><a href="http://segmentfault.com/q/1010000000095119">Mac OS X Lion 下 Git 如何升级？</a></p>
+<p><a href="http://apple.stackexchange.com/questions/39097/where-did-usr-bin-git-come-from/39130#39130">Where did /usr/bin/git come from?</a></p>
+<h3>创建 GitHub 账号 <a href="https://github.com/">GitHub</a></h3>
+<h3>配置 <code>github</code></h3>
 <a name="more"></a>
 
-<p><code>Ctrl+/</code>    注释整行 (如已选择内容，同“Ctrl+Shift+/”效果)</p>
-<p><code>Ctrl+Shift+/</code>    注释已选择内容</p>
-<p><code>Ctrl+Space</code>    自动完成 (win 与系统快捷键冲突，需修改)</p>
-<p><code>Ctrl+Z</code>    撤销</p>
-<p><code>Ctrl+Y</code>    恢复撤销</p>
-<p><code>Ctrl+Shift+V</code>    粘贴并自动缩进 (其它兄弟写的，实测 win 系统自动缩进无效)</p>
-<p><code>Ctrl+M</code>    光标跳至对应的括号</p>
-<p><code>Alt+.</code>    闭合当前标签</p>
-<p><code>Ctrl+Shift+A</code>    选择光标位置父标签对儿</p>
-<p><code>Ctrl+Shift+[</code>    折叠代码</p>
-<p><code>Ctrl+Shift+]</code>    展开代码</p>
-<p><code>Ctrl+KT</code>    折叠属性</p>
-<p><code>Ctrl+KO</code>    展开所有</p>
-<p><code>Ctrl+U</code>    软撤销 <a href="http://www.sublimetext.com/forum/viewtopic.php?f=2&amp;t=641">1</a>,<a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
-<blockquote>
-<p>软撤销:soft_undo</p>
-<p>Undoes each action stepping through granular edits. </p>
-<p>先移动到编辑位置再进行撤销操作。</p>
-</blockquote>
-<p><code>Ctrl+Shift+U</code> 软重做 <a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
-<blockquote>
-<p>软重做:soft_redo </p>
-<p>Redoes each action stepping through granular edits. </p>
-<p>先移动到编辑位置再进行重做操作。</p>
-</blockquote>
-<p><code>Ctrl+T</code>    词互换</p>
-<p><code>Ctrl+Enter</code>    插入行后</p>
-<p><code>Ctrl+Shift Enter</code>    插入行前</p>
-<p><code>Ctrl+K Backspace</code>    从光标处删除至行首</p>
-<p><code>Ctrl+Shift+UP</code>    与上行互换</p>
-<p><code>Ctrl+Shift+DOWN</code>    与下行互换</p>
-<p><code>Shift+Tab</code>    去除缩进</p>
-<p><code>Tab</code>    缩进</p>
-<p><code>F9</code>    行排序 (按 a-z)</p>
-<h2>常用插件</h2>
-<p><strong><a href="http://emmet.io">Emmet</a></strong>:HTML 编辑神器</p>
-<p><strong><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></strong>: 快速编写 javaScript 注释</p>
-<p><strong><a href="http://wbond.net/sublime_packages/prefixr">Prefixr</a></strong>: 写 CSS 可自动添加 -webkit 等私有词缀</p>
-<p><strong><a href="https://github.com/rmaksim/Sublime-Text-2-Goto-CSS-Declaration">Goto-CSS-Declaration</a></strong>: 导航 CSS 定义位置</p>
-<p><strong><a href="http://wbond.net/sublime_packages/alignment">Alignment</a></strong>: 代码对齐</p>
-<p><strong><a href="http://csscomb.com">CSScomb</a></strong>:CSS 格式化</p>
-<p><strong><a href="https://github.com/SublimeText/Tag">Tag</a></strong>:HTML 格式化</p>
-<p><strong><a href="https://github.com/jdc0589/JsFormat">JsFormat</a></strong>:javaScript 格式化</p>
-<p><strong><a href="https://github.com/dzhibas/SublimePrettyJson">Pretty JSON</a></strong>:JSON 格式化</p>
-<p><strong><a href="https://github.com/kemayo/sublime-text-2-clipboard-history">Clipboard History</a></strong>: 剪切板历史</p>
-<p><strong><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBarEnhancements</a></strong>: 侧栏右键功能增强</p>
-<p><strong><a href="https://github.com/atadams/Hex-to-HSL-Color">Hex-to-HSL-Color-Converter</a></strong>: 自动转换颜色值，从 16 进制到 HSL 格式</p>
+<p>1 打开终端，执行下面操作</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre> <span class="variable">$ </span>cd ~<span class="regexp">/.ssh    /</span><span class="regexp">/ 检查计算机 ssh 密钥
+</pre></td></tr></table></figure>
+
+
+<p>如果没有提示: <code>No such file or directory</code> 说明没有 <code>.ssh</code> 目录, 请跳到第 3 步</p>
+<p>2 如果有 <code>.ssh</code> 执行下面的操作, 清理原有 ssh 密钥</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre> <span class="char">$ </span>ls 
+ <span class="char">$ </span>mkdir key_backup // 创建备份文件夹
+ <span class="char">$ </span>cp id_rsa* key_backup // 移动你的 key 文件到备份文件夹
+ <span class="char">$ </span>rm id_rsa*
+</pre></td></tr></table></figure>
+
+<p>3 创建一个新的 ssh key</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre> $ ssh-keygen -t rsa -C <span class="string">"your_email@youremail.com"</span> <span class="comment">// 记得输入你的 github 账号的邮箱</span>
+ 
+ <span class="comment">// 会输出下面语句</span>
+ 
+ Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa key pair.
+ Enter file <span class="keyword">in</span> which to save the key (/Users/you/.ssh/id_rsa): [Press enter] 
+ <span class="comment">// 这里需要按下 enter 键就好</span>
+</pre></td></tr></table></figure>
+
+<p>按下 enter 之后，又会出现下面的提示：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>Enter passphrase(empty <span class="keyword">for</span> no passphrase): <span class="xml"><span class="tag">&lt;<span class="title">enter</span> <span class="attribute">a</span> <span class="attribute">passphrase</span>&gt;</span> // 输入一个密码
+Enter same passphrase again: <span class="tag">&lt;<span class="title">enter</span> <span class="attribute">passphrase</span> <span class="attribute">again</span>&gt;</span></span>
+</pre></td></tr></table></figure>
+
+<p>随后，你会收到一大串的提示，大概的意思是告诉你创建好了 id_rsa 和 id_rsa.pub 文件。</p>
+<p>4 在 GitHub 上添加你的 ssh key</p>
+<p>到刚刚的 .ssh 目录下，找到 id_rsa.pub 文件，拷贝里面的内容，输入到你的 GitHub 账户中的 Add key 区域。 创建成功会有相应的提示。</p>
+<p>5 验证你的 GitHub 连接</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>ssh -<span class="constant">T</span> git<span class="variable">@github</span>.com
+</pre></td></tr></table></figure>
+
+<p>如果验证成功，会有下面的提示：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>Hi username! You have successfully authenticated, <span class="keyword">but</span> GitHub <span class="keyword">does</span> <span class="keyword">not</span> provide shell access.
+</pre></td></tr></table></figure>
+
+<p>6 设置用户信息</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="comment">$</span> <span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">global</span> <span class="comment">user</span>.<span class="comment">name</span> <span class="comment">"defnngj"</span>   <span class="comment">// 给自己起个用户名用</span>
+<span class="comment">$</span> <span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">globla</span> <span class="comment">user</span>.<span class="comment">email</span>  <span class="comment">"defnngj@gmail</span>.<span class="comment">com"</span>   <span class="comment">// 填写自己的邮箱
+</pre></td></tr></table></figure>
+
+<p>注意：现在的 GitHub 不需要设置 token 了</p>
+<p><a href="http://justjavac.com/git/2011/11/22/mac-git-and-github.html">在 mac 上使用 Git 和 GitHub 连接</a></p>
+<p><a href="http://blog.csdn.net/xdonx/article/details/6941517">Mac 使用 git/github 小结</a></p>
+<p><a href="http://git-scm.com/book/zh">Pro Git 中文</a></p>
+<p><a href="http://beiyuu.com/github-pages/">使用 Github Pages 建独立博客</a></p>
 
       
     </div>
@@ -152,13 +170,13 @@
         
   
   <div class="categories">
-    <a href="/categories/tools/">tools</a>
+    <a href="/categories/mac/">mac</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/sublime/">sublime</a>
+    <a href="/tags/git/">git</a>
   </div>
 
         <!-- Baidu Button BEGIN -->

@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2013/08/11/在terminal中打开sublime-text-2/</loc>
-    <lastmod>2013-08-11T13:30:11.000Z</lastmod>
+    <loc>http://yoursite.com/2013/08/11/terminal配色/</loc>
+    <lastmod>2013-08-11T14:18:06.000Z</lastmod>
   </url>
   <url>
-    <loc>http://yoursite.com/2013/06/30/sublime-text-2/</loc>
-    <lastmod>2013-07-12T09:16:25.000Z</lastmod>
+    <loc>http://yoursite.com/2013/08/11/git-使用笔记/</loc>
+    <lastmod>2013-08-11T14:10:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite.com/2013/08/11/mac下安装git/</loc>
+    <lastmod>2013-08-11T14:10:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite.com/2013/08/11/ls-命令选项详解/</loc>
+    <lastmod>2013-08-11T13:48:46.000Z</lastmod>
   </url>
   <url>
     <loc>http://yoursite.com/2013/07/01/sublime-text-2-emmet/</loc>
-    <lastmod>2013-07-10T09:05:30.000Z</lastmod>
+    <lastmod>2013-08-11T13:39:17.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite.com/2013/06/30/sublime-text-2/</loc>
+    <lastmod>2013-08-11T13:39:08.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite.com/2013/08/11/在terminal中打开sublime-text-2/</loc>
+    <lastmod>2013-08-11T13:36:55.000Z</lastmod>
   </url>
 </urlset>

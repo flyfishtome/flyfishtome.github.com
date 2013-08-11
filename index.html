@@ -72,6 +72,234 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-08-11T14:01:46.000Z"><a href="/2013/08/11/git-使用笔记/">8月 11 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/08/11/git-使用笔记/">git 使用笔记</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3>初次使用</h3>
+<p>1 到 <a href="https://github.com">GitHub</a> 创建一个 <code>repository</code></p>
+<p>2 回到本地，创建目录和文件，输入以下命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre>$ mkdir ~/Hello-World
+<span class="preprocessor"># Creates a directory for your project called "Hello-World" in your user directory</span>
+<span class="preprocessor"># 创建目录</span>
+
+$ cd ~/Hello-World
+<span class="preprocessor"># Changes the current working directory to your newly created directory</span>
+<span class="preprocessor"># 进入目录</span>
+
+$ git init
+<span class="preprocessor"># Sets up the necessary Git files</span>
+Initialized empty Git repository in /Users/you/Hello-World/.git/
+<span class="preprocessor"># git 初始化</span>
+
+$ touch README
+<span class="preprocessor"># Creates a file called "README" in your Hello-World directory</span>
+<span class="preprocessor"># 创建自述文件</span>
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/08/11/git-使用笔记/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-08-11T13:50:25.000Z"><a href="/2013/08/11/mac下安装git/">8月 11 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/08/11/mac下安装git/">mac使用git／github</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3>安装 <code>git</code></h3>
+<p>注意：如果 mac 安装了 Xcode，会默认安装 git。</p>
+<p>一般来说，建议用 brew 安装（方便维护 git 版本及更新）：</p>
+<p><code>brew install git</code></p>
+<p>这样系统里面就会存在两个版本的 git 了，系统默认使用哪个版本，跟你的环境变量设置有关系，可以通过修改变量来指定需要使用的版本，如下：</p>
+<p>打开<code>~/.bash_profile</code>, 加入以下内容：</p>
+<p><code>export PATH=/usr/local/bin:${PATH}</code></p>
+<p>这样就可以让 bash 优先查找<code>/usr/local</code>下的指令，而且不会覆盖老文件。</p>
+<p><a href="http://segmentfault.com/q/1010000000095119">Mac OS X Lion 下 Git 如何升级？</a></p>
+<p><a href="http://apple.stackexchange.com/questions/39097/where-did-usr-bin-git-come-from/39130#39130">Where did /usr/bin/git come from?</a></p>
+<h3>创建 GitHub 账号 <a href="https://github.com/">GitHub</a></h3>
+<h3>配置 <code>github</code></h3>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/08/11/mac下安装git/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-08-11T13:41:40.000Z"><a href="/2013/08/11/ls-命令选项详解/">8月 11 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/08/11/ls-命令选项详解/">ls 命令选项详解</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ls 命令可以说是 Linux 下最常用的命令之一。它有众多的选项，其中有很多是很有用的，你是否熟悉呢？下面列出了 ls 命令的绝大多数选项。比较常用的用蓝色表示。</p>
+<p>　</p>
+<blockquote>
+<p><code>-a 列出目录下的所有文件，包括以 . 开头的隐含文件。</code></p>
+<p><code>-b 把文件名中不可输出的字符用反斜杠加字符编号 (就象在 C 语言里一样) 的形式列出。</code></p>
+<p><code>-c 输出文件的 i 节点的修改时间，并以此排序。</code></p>
+<p><code>-d 将目录象文件一样显示，而不是显示其下的文件。</code></p>
+<p><code>-e 输出时间的全部信息，而不是输出简略信息。</code></p>
+<p><code>-f -U 对输出的文件不排序。</code></p>
+<p><code>-g 无用。</code></p>
+<p><code>-i 输出文件的 i 节点的索引信息。</code></p>
+<p><code>-k 以 k 字节的形式表示文件的大小。</code></p>
+<p><code>-l 列出文件的详细信息。</code></p>
+<p><code>-m 横向输出文件名，并以“，”作分格符。</code></p>
+<p><code>-n 用数字的 UID,GID 代替名称。</code></p>
+<p><code>-o 显示文件的除组信息外的详细信息。</code></p>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/08/11/ls-命令选项详解/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-08-11T13:38:00.000Z"><a href="/2013/08/11/terminal配色/">8月 11 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/08/11/terminal配色/">Terminal配色</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3>彩色化 ls 的输出</h3>
+<p>Mac 中 BSD 的 ls 命令可以使用 -G 参数彩色化输出的文件列表，需要配置 LSCOLORS 环境变量定义颜色，具体配置方法可以输入 man ls 查看。</p>
+<p>不过，我推荐安装 Linux 使用的 GNU Coreutils 替换 Mac 的 ls 命令，因为：</p>
+<ul>
+<li><p>Coreutils 提供了配置工具，定义颜色代码更加方便；</p>
+</li>
+<li><p>Coreutils 包含的不仅仅是 ls，同时作为 Linux 用户，我更习惯于使用 GNU 的各种 shell 工具。</p>
+</li>
+</ul>
+<p>Coreutils 的安装与配置方法如下：</p>
+<ul>
+<li>通过 Homebrew 安装 Coreutils</li>
+</ul>
+<p><code>brew install xz coreutils</code></p>
+<p>注：Coreutils 并不依赖于 xz，但它的源码是用 xz 格式压缩的，安装 xz 才能解压。</p>
+<ul>
+<li>生成颜色定义文件</li>
+</ul>
+<p><code>gdircolors --print-database &gt; ~/.dir_colors</code></p>
+<ul>
+<li>在~/.bash_profile 配置文件中加入以下代码</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/08/11/terminal配色/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-08-11T13:27:50.000Z"><a href="/2013/08/11/在terminal中打开sublime-text-2/">8月 11 2013</a></time>
       
       
@@ -102,107 +330,11 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-30T16:00:00.000Z"><a href="/2013/07/01/sublime-text-2-emmet/">7月 1 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/07/01/sublime-text-2-emmet/">Sublime Text 2-Emmet</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p><strong>快捷设置</strong></p>
-<p><code>Ctrl+E</code> or <code>Tab</code> <em>Expand Abbreviation</em> 展开缩写</p>
-<p><code>Ctrl+,</code> <em>Match Pair Outward</em> 匹配对向外</p>
-<p><code>Ctrl+Shift+0</code> <em>Match Pair Inward</em> 匹配对向内</p>
-<p><code>Ctrl+Alt+j</code> <em>Go to Matching Pair</em> 转到匹配的对</p>
-<p><code>Ctrl+G</code> <em>Wrap With Abbreviation</em> 嵌套代码</p>
-<p><code>Ctrl+Alt+→</code> or <code>Ctrl+Alt+←</code> <em>Go to Edit Point</em> 转到编辑点</p>
-<p><code>Ctrl+Alt+.</code> or <code>Ctrl+Alt+,</code> <em>Select Item</em> 选择项</p>
-<p><code>Ctrl+Shift+/</code> <em>Toggle Comment</em> 添加注释</p>
-<p><code>Shift+Ctrl+` </code> <em>Split/Join Tag</em> 分离并加入标签</p>
-<p><code>shift+ctrl+;</code> <em>Remove Tag</em> 移除标签</p>
-<p><code>Ctrl+J</code> <em>Merge Lines</em> 合并行</p>
-<p><code>Ctrl+U</code> <em>Update Image Size</em> 更新图像尺寸</p>
-<p><code>Shift+Ctrl+Y</code> <em>Evaluate Math Expression</em> 计算数学表达式</p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/07/01/sublime-text-2-emmet/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-30T12:56:27.000Z"><a href="/2013/06/30/sublime-text-2/">6月 30 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/06/30/sublime-text-2/">Sublime Text 2</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p><strong>默认快捷</strong></p>
-<p><code>Ctrl+Shift+P</code>   打开命令面板 11</p>
-<p><code>Ctrl+P</code>    搜索项目中的文件</p>
-<p><code>Ctrl+L</code>    选择整行 (按住 - 继续选择下行)</p>
-<p><code>Ctrl+G</code>       跳转到第几行</p>
-<p><code>Ctrl+KK</code>    从光标处删除至行尾</p>
-<p><code>Ctrl+Shift+K</code>    删除整行</p>
-<p><code>Ctrl+Shift+D</code>    复制光标所在整行，插入在该行之前</p>
-<p><code>Ctrl+J</code>    合并行 (已选择需要合并的多行时)</p>
-<p><code>Ctrl+KU</code>    改为大写</p>
-<p><code>Ctrl+KL</code>    改为小写</p>
-<p><code>Ctrl+D</code>    选词 (按住 - 继续选择下个相同的字符串)</p>
-<p><code>Ctrl+M</code>    光标移动至括号内开始或结束的位置</p>
-<p><code>Ctrl+Shift+M</code>    选择括号内的内容 (按住 - 继续选择父括号)</p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/06/30/sublime-text-2/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
+  
+    <a href="/page/2/" class="alignright next">下一页</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
@@ -219,7 +351,9 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/tools/">tools</a><small>3</small></li>
+    <li><a href="/categories/mac/">mac</a><small>4</small></li>
+  
+    <li><a href="/categories/tools/">tools</a><small>5</small></li>
   
   </ul>
 </div>
@@ -229,7 +363,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/emmet/" style="font-size: 10.00px;">emmet</a><a href="/tags/sublime/" style="font-size: 15.00px;">sublime</a>
+    <a href="/tags/Terminal/" style="font-size: 18.00px;">Terminal</a><a href="/tags/emmet/" style="font-size: 10.00px;">emmet</a><a href="/tags/git/" style="font-size: 14.00px;">git</a><a href="/tags/mac/" style="font-size: 12.00px;">mac</a><a href="/tags/sublime/" style="font-size: 16.00px;">sublime</a>
   </div>
 </div>
 

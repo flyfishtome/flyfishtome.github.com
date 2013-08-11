@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sublime Text 2 | flyfishtome</title>
+  <title>ls 命令选项详解 | flyfishtome</title>
   <meta name="author" content="Mr.Rich">
   
   <meta name="description" content="The front-end development site">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Sublime Text 2"/>
+  <meta property="og:title" content="ls 命令选项详解"/>
   <meta property="og:site_name" content="flyfishtome"/>
 
   
@@ -71,79 +71,59 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-06-30T12:56:27.000Z"><a href="/2013/06/30/sublime-text-2/">6月 30 2013</a></time>
+        <time datetime="2013-08-11T13:41:40.000Z"><a href="/2013/08/11/ls-命令选项详解/">8月 11 2013</a></time>
       
       
   
-    <h1 class="title">Sublime Text 2</h1>
+    <h1 class="title">ls 命令选项详解</h1>
   
 
     </header>
     <div class="entry">
       
-        <p><strong>默认快捷</strong></p>
-<p><code>Ctrl+Shift+P</code>   打开命令面板 11</p>
-<p><code>Ctrl+P</code>    搜索项目中的文件</p>
-<p><code>Ctrl+L</code>    选择整行 (按住 - 继续选择下行)</p>
-<p><code>Ctrl+G</code>       跳转到第几行</p>
-<p><code>Ctrl+KK</code>    从光标处删除至行尾</p>
-<p><code>Ctrl+Shift+K</code>    删除整行</p>
-<p><code>Ctrl+Shift+D</code>    复制光标所在整行，插入在该行之前</p>
-<p><code>Ctrl+J</code>    合并行 (已选择需要合并的多行时)</p>
-<p><code>Ctrl+KU</code>    改为大写</p>
-<p><code>Ctrl+KL</code>    改为小写</p>
-<p><code>Ctrl+D</code>    选词 (按住 - 继续选择下个相同的字符串)</p>
-<p><code>Ctrl+M</code>    光标移动至括号内开始或结束的位置</p>
-<p><code>Ctrl+Shift+M</code>    选择括号内的内容 (按住 - 继续选择父括号)</p>
+        <p>ls 命令可以说是 Linux 下最常用的命令之一。它有众多的选项，其中有很多是很有用的，你是否熟悉呢？下面列出了 ls 命令的绝大多数选项。比较常用的用蓝色表示。</p>
+<p>　</p>
+<blockquote>
+<p><code>-a 列出目录下的所有文件，包括以 . 开头的隐含文件。</code></p>
+<p><code>-b 把文件名中不可输出的字符用反斜杠加字符编号 (就象在 C 语言里一样) 的形式列出。</code></p>
+<p><code>-c 输出文件的 i 节点的修改时间，并以此排序。</code></p>
+<p><code>-d 将目录象文件一样显示，而不是显示其下的文件。</code></p>
+<p><code>-e 输出时间的全部信息，而不是输出简略信息。</code></p>
+<p><code>-f -U 对输出的文件不排序。</code></p>
+<p><code>-g 无用。</code></p>
+<p><code>-i 输出文件的 i 节点的索引信息。</code></p>
+<p><code>-k 以 k 字节的形式表示文件的大小。</code></p>
+<p><code>-l 列出文件的详细信息。</code></p>
+<p><code>-m 横向输出文件名，并以“，”作分格符。</code></p>
+<p><code>-n 用数字的 UID,GID 代替名称。</code></p>
+<p><code>-o 显示文件的除组信息外的详细信息。</code></p>
+</blockquote>
 <a name="more"></a>
 
-<p><code>Ctrl+/</code>    注释整行 (如已选择内容，同“Ctrl+Shift+/”效果)</p>
-<p><code>Ctrl+Shift+/</code>    注释已选择内容</p>
-<p><code>Ctrl+Space</code>    自动完成 (win 与系统快捷键冲突，需修改)</p>
-<p><code>Ctrl+Z</code>    撤销</p>
-<p><code>Ctrl+Y</code>    恢复撤销</p>
-<p><code>Ctrl+Shift+V</code>    粘贴并自动缩进 (其它兄弟写的，实测 win 系统自动缩进无效)</p>
-<p><code>Ctrl+M</code>    光标跳至对应的括号</p>
-<p><code>Alt+.</code>    闭合当前标签</p>
-<p><code>Ctrl+Shift+A</code>    选择光标位置父标签对儿</p>
-<p><code>Ctrl+Shift+[</code>    折叠代码</p>
-<p><code>Ctrl+Shift+]</code>    展开代码</p>
-<p><code>Ctrl+KT</code>    折叠属性</p>
-<p><code>Ctrl+KO</code>    展开所有</p>
-<p><code>Ctrl+U</code>    软撤销 <a href="http://www.sublimetext.com/forum/viewtopic.php?f=2&amp;t=641">1</a>,<a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
+<p>&gt;</p>
 <blockquote>
-<p>软撤销:soft_undo</p>
-<p>Undoes each action stepping through granular edits. </p>
-<p>先移动到编辑位置再进行撤销操作。</p>
+<p><code>-p -F 在每个文件名后附上一个字符以说明该文件的类型，“*”表示可执行的普通文件；“/”表示目录；“@”表示符号链接；“|”表示 FIFOs；“=”表示套接字 (sockets)。</code></p>
+<p><code>-q 用? 代替不可输出的字符。</code></p>
+<p><code>-r 对目录反向排序。</code></p>
+<p><code>-s 在每个文件名后输出该文件的大小。</code></p>
+<p><code>-t 以时间排序。</code></p>
+<p><code>-u 以文件上次被访问的时间排序。</code></p>
+<p><code>-x 按列输出，横向排序。</code></p>
+<p><code>-A 显示除 “.”和“..”外的所有文件。</code></p>
+<p><code>-B 不输出以 “~”结尾的备份文件。</code></p>
+<p><code>-C 按列输出，纵向排序。</code></p>
+<p><code>-G 输出文件的组的信息。</code></p>
+<p><code>-L 列出链接文件名而不是链接到的文件。</code></p>
+<p><code>-N 不限制文件长度。</code></p>
+<p><code>-Q 把输出的文件名用双引号括起来。</code></p>
+<p><code>-R 列出所有子目录下的文件。</code></p>
+<p><code>-S 以文件大小排序。</code></p>
+<p><code>-X 以文件的扩展名 (最后一个 . 后的字符) 排序。</code></p>
+<p><code>-1 一行只输出一个文件。</code></p>
+<p><code>--color=no 不显示彩色文件名</code></p>
+<p><code>--help 在标准输出上显示帮助信息。</code></p>
+<p><code>--version 在标准输出上输出版本信息并退出。</code></p>
 </blockquote>
-<p><code>Ctrl+Shift+U</code> 软重做 <a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
-<blockquote>
-<p>软重做:soft_redo </p>
-<p>Redoes each action stepping through granular edits. </p>
-<p>先移动到编辑位置再进行重做操作。</p>
-</blockquote>
-<p><code>Ctrl+T</code>    词互换</p>
-<p><code>Ctrl+Enter</code>    插入行后</p>
-<p><code>Ctrl+Shift Enter</code>    插入行前</p>
-<p><code>Ctrl+K Backspace</code>    从光标处删除至行首</p>
-<p><code>Ctrl+Shift+UP</code>    与上行互换</p>
-<p><code>Ctrl+Shift+DOWN</code>    与下行互换</p>
-<p><code>Shift+Tab</code>    去除缩进</p>
-<p><code>Tab</code>    缩进</p>
-<p><code>F9</code>    行排序 (按 a-z)</p>
-<h2>常用插件</h2>
-<p><strong><a href="http://emmet.io">Emmet</a></strong>:HTML 编辑神器</p>
-<p><strong><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></strong>: 快速编写 javaScript 注释</p>
-<p><strong><a href="http://wbond.net/sublime_packages/prefixr">Prefixr</a></strong>: 写 CSS 可自动添加 -webkit 等私有词缀</p>
-<p><strong><a href="https://github.com/rmaksim/Sublime-Text-2-Goto-CSS-Declaration">Goto-CSS-Declaration</a></strong>: 导航 CSS 定义位置</p>
-<p><strong><a href="http://wbond.net/sublime_packages/alignment">Alignment</a></strong>: 代码对齐</p>
-<p><strong><a href="http://csscomb.com">CSScomb</a></strong>:CSS 格式化</p>
-<p><strong><a href="https://github.com/SublimeText/Tag">Tag</a></strong>:HTML 格式化</p>
-<p><strong><a href="https://github.com/jdc0589/JsFormat">JsFormat</a></strong>:javaScript 格式化</p>
-<p><strong><a href="https://github.com/dzhibas/SublimePrettyJson">Pretty JSON</a></strong>:JSON 格式化</p>
-<p><strong><a href="https://github.com/kemayo/sublime-text-2-clipboard-history">Clipboard History</a></strong>: 剪切板历史</p>
-<p><strong><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBarEnhancements</a></strong>: 侧栏右键功能增强</p>
-<p><strong><a href="https://github.com/atadams/Hex-to-HSL-Color">Hex-to-HSL-Color-Converter</a></strong>: 自动转换颜色值，从 16 进制到 HSL 格式</p>
 
       
     </div>
@@ -152,13 +132,13 @@
         
   
   <div class="categories">
-    <a href="/categories/tools/">tools</a>
+    <a href="/categories/mac/">mac</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/sublime/">sublime</a>
+    <a href="/tags/Terminal/">Terminal</a>
   </div>
 
         <!-- Baidu Button BEGIN -->

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[done is better than perfect]]></subtitle>
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   <link href="http://yoursite.com"/>
-  <updated>2013-08-11T13:33:04.980Z</updated>
+  <updated>2013-08-11T14:18:28.454Z</updated>
   <id>http://yoursite.com/</id>
   <author>
     <name><![CDATA[Mr.Rich]]></name>
@@ -12,11 +12,301 @@
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
+    <title type="html"><![CDATA[git 使用笔记]]></title>
+    <link href="http://yoursite.com/2013/08/11/git-使用笔记/"/>
+    <id>http://yoursite.com/2013/08/11/git-使用笔记/</id>
+    <published>2013-08-11T14:01:46.000Z</published>
+    <updated>2013-08-11T14:10:37.000Z</updated>
+    <content type="html"><![CDATA[<h3>初次使用</h3>
+<p>1 到 <a href="https://github.com">GitHub</a> 创建一个 <code>repository</code></p>
+<p>2 回到本地，创建目录和文件，输入以下命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre>$ mkdir ~/Hello-World
+<span class="preprocessor"># Creates a directory for your project called "Hello-World" in your user directory</span>
+<span class="preprocessor"># 创建目录</span>
+
+$ cd ~/Hello-World
+<span class="preprocessor"># Changes the current working directory to your newly created directory</span>
+<span class="preprocessor"># 进入目录</span>
+
+$ git init
+<span class="preprocessor"># Sets up the necessary Git files</span>
+Initialized empty Git repository in /Users/you/Hello-World/.git/
+<span class="preprocessor"># git 初始化</span>
+
+$ touch README
+<span class="preprocessor"># Creates a file called "README" in your Hello-World directory</span>
+<span class="preprocessor"># 创建自述文件</span>
+</pre></td></tr></table></figure>
+
+<a name="more"></a>
+
+<p>3 提交文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>$ git add README
+<span class="preprocessor"># Stages your README file, adding it to the list of files to be committed</span>
+<span class="preprocessor"># 生成快照并存入项目索引</span>
+
+$ git commit -m <span class="string">'first commit'</span>
+<span class="preprocessor"># Commits your files, adding the message "first commit"</span>
+<span class="preprocessor"># 提交项目索引, 并添加注释（-m 必须有的，后面的值可以为空，即''）</span>
+</pre></td></tr></table></figure>
+
+<p>4 推送并更新远程仓库</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>$ git remote add origin https:<span class="comment">//github.com/username/Hello-World.git</span>
+<span class="preprocessor"># Creates a remote named "origin" pointing at your GitHub repository</span>
+<span class="preprocessor"># 创建远程，并命名 origin 指向你的 GitHub 的库 </span>
+
+$ git push origin master
+<span class="preprocessor"># Sends your commits in the "master" branch to GitHub</span>
+<span class="preprocessor"># 将您在“master”分支提交到 GitHub</span>
+</pre></td></tr></table></figure>
+
+]]></content>
+    <category scheme="http://yoursite.com/tags/git/" term="git"/>
+    <category scheme="http://yoursite.com/categories/mac/" term="mac"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[mac使用git／github]]></title>
+    <link href="http://yoursite.com/2013/08/11/mac下安装git/"/>
+    <id>http://yoursite.com/2013/08/11/mac下安装git/</id>
+    <published>2013-08-11T13:50:25.000Z</published>
+    <updated>2013-08-11T14:10:18.000Z</updated>
+    <content type="html"><![CDATA[<h3>安装 <code>git</code></h3>
+<p>注意：如果 mac 安装了 Xcode，会默认安装 git。</p>
+<p>一般来说，建议用 brew 安装（方便维护 git 版本及更新）：</p>
+<p><code>brew install git</code></p>
+<p>这样系统里面就会存在两个版本的 git 了，系统默认使用哪个版本，跟你的环境变量设置有关系，可以通过修改变量来指定需要使用的版本，如下：</p>
+<p>打开<code>~/.bash_profile</code>, 加入以下内容：</p>
+<p><code>export PATH=/usr/local/bin:${PATH}</code></p>
+<p>这样就可以让 bash 优先查找<code>/usr/local</code>下的指令，而且不会覆盖老文件。</p>
+<p><a href="http://segmentfault.com/q/1010000000095119">Mac OS X Lion 下 Git 如何升级？</a></p>
+<p><a href="http://apple.stackexchange.com/questions/39097/where-did-usr-bin-git-come-from/39130#39130">Where did /usr/bin/git come from?</a></p>
+<h3>创建 GitHub 账号 <a href="https://github.com/">GitHub</a></h3>
+<h3>配置 <code>github</code></h3>
+<a name="more"></a>
+
+<p>1 打开终端，执行下面操作</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre> <span class="variable">$ </span>cd ~<span class="regexp">/.ssh    /</span><span class="regexp">/ 检查计算机 ssh 密钥
+</pre></td></tr></table></figure>
+
+
+<p>如果没有提示: <code>No such file or directory</code> 说明没有 <code>.ssh</code> 目录, 请跳到第 3 步</p>
+<p>2 如果有 <code>.ssh</code> 执行下面的操作, 清理原有 ssh 密钥</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre> <span class="char">$ </span>ls 
+ <span class="char">$ </span>mkdir key_backup // 创建备份文件夹
+ <span class="char">$ </span>cp id_rsa* key_backup // 移动你的 key 文件到备份文件夹
+ <span class="char">$ </span>rm id_rsa*
+</pre></td></tr></table></figure>
+
+<p>3 创建一个新的 ssh key</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre> $ ssh-keygen -t rsa -C <span class="string">"your_email@youremail.com"</span> <span class="comment">// 记得输入你的 github 账号的邮箱</span>
+ 
+ <span class="comment">// 会输出下面语句</span>
+ 
+ Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa key pair.
+ Enter file <span class="keyword">in</span> which to save the key (/Users/you/.ssh/id_rsa): [Press enter] 
+ <span class="comment">// 这里需要按下 enter 键就好</span>
+</pre></td></tr></table></figure>
+
+<p>按下 enter 之后，又会出现下面的提示：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>Enter passphrase(empty <span class="keyword">for</span> no passphrase): <span class="xml"><span class="tag">&lt;<span class="title">enter</span> <span class="attribute">a</span> <span class="attribute">passphrase</span>&gt;</span> // 输入一个密码
+Enter same passphrase again: <span class="tag">&lt;<span class="title">enter</span> <span class="attribute">passphrase</span> <span class="attribute">again</span>&gt;</span></span>
+</pre></td></tr></table></figure>
+
+<p>随后，你会收到一大串的提示，大概的意思是告诉你创建好了 id_rsa 和 id_rsa.pub 文件。</p>
+<p>4 在 GitHub 上添加你的 ssh key</p>
+<p>到刚刚的 .ssh 目录下，找到 id_rsa.pub 文件，拷贝里面的内容，输入到你的 GitHub 账户中的 Add key 区域。 创建成功会有相应的提示。</p>
+<p>5 验证你的 GitHub 连接</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>ssh -<span class="constant">T</span> git<span class="variable">@github</span>.com
+</pre></td></tr></table></figure>
+
+<p>如果验证成功，会有下面的提示：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>Hi username! You have successfully authenticated, <span class="keyword">but</span> GitHub <span class="keyword">does</span> <span class="keyword">not</span> provide shell access.
+</pre></td></tr></table></figure>
+
+<p>6 设置用户信息</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="comment">$</span> <span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">global</span> <span class="comment">user</span>.<span class="comment">name</span> <span class="comment">"defnngj"</span>   <span class="comment">// 给自己起个用户名用</span>
+<span class="comment">$</span> <span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">globla</span> <span class="comment">user</span>.<span class="comment">email</span>  <span class="comment">"defnngj@gmail</span>.<span class="comment">com"</span>   <span class="comment">// 填写自己的邮箱
+</pre></td></tr></table></figure>
+
+<p>注意：现在的 GitHub 不需要设置 token 了</p>
+<p><a href="http://justjavac.com/git/2011/11/22/mac-git-and-github.html">在 mac 上使用 Git 和 GitHub 连接</a></p>
+<p><a href="http://blog.csdn.net/xdonx/article/details/6941517">Mac 使用 git/github 小结</a></p>
+<p><a href="http://git-scm.com/book/zh">Pro Git 中文</a></p>
+<p><a href="http://beiyuu.com/github-pages/">使用 Github Pages 建独立博客</a></p>
+]]></content>
+    <category scheme="http://yoursite.com/tags/git/" term="git"/>
+    <category scheme="http://yoursite.com/categories/mac/" term="mac"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[ls 命令选项详解]]></title>
+    <link href="http://yoursite.com/2013/08/11/ls-命令选项详解/"/>
+    <id>http://yoursite.com/2013/08/11/ls-命令选项详解/</id>
+    <published>2013-08-11T13:41:40.000Z</published>
+    <updated>2013-08-11T13:48:46.000Z</updated>
+    <content type="html"><![CDATA[<p>ls 命令可以说是 Linux 下最常用的命令之一。它有众多的选项，其中有很多是很有用的，你是否熟悉呢？下面列出了 ls 命令的绝大多数选项。比较常用的用蓝色表示。</p>
+<p>　</p>
+<blockquote>
+<p><code>-a 列出目录下的所有文件，包括以 . 开头的隐含文件。</code></p>
+<p><code>-b 把文件名中不可输出的字符用反斜杠加字符编号 (就象在 C 语言里一样) 的形式列出。</code></p>
+<p><code>-c 输出文件的 i 节点的修改时间，并以此排序。</code></p>
+<p><code>-d 将目录象文件一样显示，而不是显示其下的文件。</code></p>
+<p><code>-e 输出时间的全部信息，而不是输出简略信息。</code></p>
+<p><code>-f -U 对输出的文件不排序。</code></p>
+<p><code>-g 无用。</code></p>
+<p><code>-i 输出文件的 i 节点的索引信息。</code></p>
+<p><code>-k 以 k 字节的形式表示文件的大小。</code></p>
+<p><code>-l 列出文件的详细信息。</code></p>
+<p><code>-m 横向输出文件名，并以“，”作分格符。</code></p>
+<p><code>-n 用数字的 UID,GID 代替名称。</code></p>
+<p><code>-o 显示文件的除组信息外的详细信息。</code></p>
+</blockquote>
+<a name="more"></a>
+
+<p>&gt;</p>
+<blockquote>
+<p><code>-p -F 在每个文件名后附上一个字符以说明该文件的类型，“*”表示可执行的普通文件；“/”表示目录；“@”表示符号链接；“|”表示 FIFOs；“=”表示套接字 (sockets)。</code></p>
+<p><code>-q 用? 代替不可输出的字符。</code></p>
+<p><code>-r 对目录反向排序。</code></p>
+<p><code>-s 在每个文件名后输出该文件的大小。</code></p>
+<p><code>-t 以时间排序。</code></p>
+<p><code>-u 以文件上次被访问的时间排序。</code></p>
+<p><code>-x 按列输出，横向排序。</code></p>
+<p><code>-A 显示除 “.”和“..”外的所有文件。</code></p>
+<p><code>-B 不输出以 “~”结尾的备份文件。</code></p>
+<p><code>-C 按列输出，纵向排序。</code></p>
+<p><code>-G 输出文件的组的信息。</code></p>
+<p><code>-L 列出链接文件名而不是链接到的文件。</code></p>
+<p><code>-N 不限制文件长度。</code></p>
+<p><code>-Q 把输出的文件名用双引号括起来。</code></p>
+<p><code>-R 列出所有子目录下的文件。</code></p>
+<p><code>-S 以文件大小排序。</code></p>
+<p><code>-X 以文件的扩展名 (最后一个 . 后的字符) 排序。</code></p>
+<p><code>-1 一行只输出一个文件。</code></p>
+<p><code>--color=no 不显示彩色文件名</code></p>
+<p><code>--help 在标准输出上显示帮助信息。</code></p>
+<p><code>--version 在标准输出上输出版本信息并退出。</code></p>
+</blockquote>
+]]></content>
+    <category scheme="http://yoursite.com/tags/Terminal/" term="Terminal"/>
+    <category scheme="http://yoursite.com/categories/mac/" term="mac"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Terminal配色]]></title>
+    <link href="http://yoursite.com/2013/08/11/terminal配色/"/>
+    <id>http://yoursite.com/2013/08/11/terminal配色/</id>
+    <published>2013-08-11T13:38:00.000Z</published>
+    <updated>2013-08-11T14:18:06.000Z</updated>
+    <content type="html"><![CDATA[<h3>彩色化 ls 的输出</h3>
+<p>Mac 中 BSD 的 ls 命令可以使用 -G 参数彩色化输出的文件列表，需要配置 LSCOLORS 环境变量定义颜色，具体配置方法可以输入 man ls 查看。</p>
+<p>不过，我推荐安装 Linux 使用的 GNU Coreutils 替换 Mac 的 ls 命令，因为：</p>
+<ul>
+<li><p>Coreutils 提供了配置工具，定义颜色代码更加方便；</p>
+</li>
+<li><p>Coreutils 包含的不仅仅是 ls，同时作为 Linux 用户，我更习惯于使用 GNU 的各种 shell 工具。</p>
+</li>
+</ul>
+<p>Coreutils 的安装与配置方法如下：</p>
+<ul>
+<li>通过 Homebrew 安装 Coreutils</li>
+</ul>
+<p><code>brew install xz coreutils</code></p>
+<p>注：Coreutils 并不依赖于 xz，但它的源码是用 xz 格式压缩的，安装 xz 才能解压。</p>
+<ul>
+<li>生成颜色定义文件</li>
+</ul>
+<p><code>gdircolors --print-database &gt; ~/.dir_colors</code></p>
+<ul>
+<li>在~/.bash_profile 配置文件中加入以下代码</li>
+</ul>
+<a name="more"></a>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="comment">if</span> <span class="comment">brew</span> <span class="comment">list</span> <span class="comment">|</span> <span class="comment">grep</span> <span class="comment">coreutils</span> &gt; <span class="comment">/dev/null</span> <span class="comment">;</span> <span class="comment">then</span>
+    <span class="comment">PATH="$(brew</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">prefix</span> <span class="comment">coreutils)/libexec/gnubin:$PATH"</span>
+<span class="comment">	alias</span> <span class="comment">ls='ls</span> <span class="literal">-</span><span class="comment">F</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">show</span>-<span class="comment">control</span>-<span class="comment">chars</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">color=auto'</span>
+  <span class="comment">	eval</span> <span class="comment">`gdircolors</span> <span class="literal">-</span><span class="comment">b</span> <span class="comment">$HOME/</span>.<span class="comment">dir_colors`</span>
+<span class="comment">fi
+</pre></td></tr></table></figure>
+
+<p>gdircolor 的作用就是设置 ls 命令使用的环境变量 LS_COLORS（BSD 是 LSCOLORS），我们可以修改~/.dir_colors 自定义文件的颜色，此文件中的注释已经包含各种颜色取值的说明。</p>
+<h3>grep 高亮显示关键字</h3>
+<p>这个很简单，加上 --color 参数就可以了，为了使用方便，可以在~/.bash_profile 配置文件中加上 alias 定义。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">alias</span> grep=<span class="attribute">'grep</span> <span class="comment">--color'</span>
+<span class="keyword">alias</span> egrep=<span class="attribute">'egrep</span> <span class="comment">--color'</span>
+<span class="keyword">alias</span> fgrep=<span class="attribute">'fgrep</span> <span class="comment">--color'</span>
+</pre></td></tr></table></figure>
+
+<h3>Vim 语法高亮</h3>
+<p>在 Vim 中输入命令<code>:syntax on</code>激活语法高亮，若需要 Vim 启动时自动激活，在<code>~/.vimrc</code>中添加一行<code>syntax on</code>即可。</p>
+<p><a href="http://linfan.info/blog/2012/02/27/colorful-terminal-in-mac/">让 Mac OS X 的终端多姿多彩</a></p>
+<p><a href="http://flaviocopes.com/how-to-get-a-nicer-ls-in-the-osx-command-line/">How to get a nicer “ls” in the OSX command line</a></p>
+<p><a href="http://superuser.com/questions/349897/ls-version-number-sorting-mac-os-x">ls version number sorting Mac OS X</a></p>
+<p><a href="http://hocuspokus.net/2008/01/a-better-ls-for-mac-os-x/">A better ls for Mac OS X</a></p>
+]]></content>
+    <category scheme="http://yoursite.com/tags/Terminal/" term="Terminal"/>
+    <category scheme="http://yoursite.com/categories/mac/" term="mac"/>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[在Terminal中打开Sublime Text 2]]></title>
     <link href="http://yoursite.com/2013/08/11/在terminal中打开sublime-text-2/"/>
     <id>http://yoursite.com/2013/08/11/在terminal中打开sublime-text-2/</id>
     <published>2013-08-11T13:27:50.000Z</published>
-    <updated>2013-08-11T13:30:11.000Z</updated>
+    <updated>2013-08-11T13:36:55.000Z</updated>
     <content type="html"><![CDATA[<p><code>ln -s &quot;/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl&quot; /usr/local/bin/sublime</code></p>
 <p>或者用 alias 也可以：</p>
 <p><code>alias sublime=&#39;open -a &quot;Sublime Text 2&quot;&#39;</code></p>
@@ -24,6 +314,7 @@
 <p><a href="http://www.sublimetext.com/docs/2/osx_command_line.html">OS X Command Line</a></p>
 ]]></content>
     <category scheme="http://yoursite.com/tags/sublime/" term="sublime"/>
+    <category scheme="http://yoursite.com/tags/Terminal/" term="Terminal"/>
     <category scheme="http://yoursite.com/categories/tools/" term="tools"/>
   </entry>
   <entry>
@@ -31,7 +322,7 @@
     <link href="http://yoursite.com/2013/07/01/sublime-text-2-emmet/"/>
     <id>http://yoursite.com/2013/07/01/sublime-text-2-emmet/</id>
     <published>2013-06-30T16:00:00.000Z</published>
-    <updated>2013-07-10T09:05:30.000Z</updated>
+    <updated>2013-08-11T13:39:17.000Z</updated>
     <content type="html"><![CDATA[<p><strong>快捷设置</strong></p>
 <p><code>Ctrl+E</code> or <code>Tab</code> <em>Expand Abbreviation</em> 展开缩写</p>
 <p><code>Ctrl+,</code> <em>Match Pair Outward</em> 匹配对向外</p>
@@ -62,7 +353,7 @@
     <link href="http://yoursite.com/2013/06/30/sublime-text-2/"/>
     <id>http://yoursite.com/2013/06/30/sublime-text-2/</id>
     <published>2013-06-30T12:56:27.000Z</published>
-    <updated>2013-07-12T09:16:25.000Z</updated>
+    <updated>2013-08-11T13:39:08.000Z</updated>
     <content type="html"><![CDATA[<p><strong>默认快捷</strong></p>
 <p><code>Ctrl+Shift+P</code>   打开命令面板 11</p>
 <p><code>Ctrl+P</code>    搜索项目中的文件</p>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sublime Text 2 | flyfishtome</title>
+  <title>git 使用笔记 | flyfishtome</title>
   <meta name="author" content="Mr.Rich">
   
   <meta name="description" content="The front-end development site">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Sublime Text 2"/>
+  <meta property="og:title" content="git 使用笔记"/>
   <meta property="og:site_name" content="flyfishtome"/>
 
   
@@ -71,79 +71,89 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-06-30T12:56:27.000Z"><a href="/2013/06/30/sublime-text-2/">6月 30 2013</a></time>
+        <time datetime="2013-08-11T14:01:46.000Z"><a href="/2013/08/11/git-使用笔记/">8月 11 2013</a></time>
       
       
   
-    <h1 class="title">Sublime Text 2</h1>
+    <h1 class="title">git 使用笔记</h1>
   
 
     </header>
     <div class="entry">
       
-        <p><strong>默认快捷</strong></p>
-<p><code>Ctrl+Shift+P</code>   打开命令面板 11</p>
-<p><code>Ctrl+P</code>    搜索项目中的文件</p>
-<p><code>Ctrl+L</code>    选择整行 (按住 - 继续选择下行)</p>
-<p><code>Ctrl+G</code>       跳转到第几行</p>
-<p><code>Ctrl+KK</code>    从光标处删除至行尾</p>
-<p><code>Ctrl+Shift+K</code>    删除整行</p>
-<p><code>Ctrl+Shift+D</code>    复制光标所在整行，插入在该行之前</p>
-<p><code>Ctrl+J</code>    合并行 (已选择需要合并的多行时)</p>
-<p><code>Ctrl+KU</code>    改为大写</p>
-<p><code>Ctrl+KL</code>    改为小写</p>
-<p><code>Ctrl+D</code>    选词 (按住 - 继续选择下个相同的字符串)</p>
-<p><code>Ctrl+M</code>    光标移动至括号内开始或结束的位置</p>
-<p><code>Ctrl+Shift+M</code>    选择括号内的内容 (按住 - 继续选择父括号)</p>
+        <h3>初次使用</h3>
+<p>1 到 <a href="https://github.com">GitHub</a> 创建一个 <code>repository</code></p>
+<p>2 回到本地，创建目录和文件，输入以下命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre>$ mkdir ~/Hello-World
+<span class="preprocessor"># Creates a directory for your project called "Hello-World" in your user directory</span>
+<span class="preprocessor"># 创建目录</span>
+
+$ cd ~/Hello-World
+<span class="preprocessor"># Changes the current working directory to your newly created directory</span>
+<span class="preprocessor"># 进入目录</span>
+
+$ git init
+<span class="preprocessor"># Sets up the necessary Git files</span>
+Initialized empty Git repository in /Users/you/Hello-World/.git/
+<span class="preprocessor"># git 初始化</span>
+
+$ touch README
+<span class="preprocessor"># Creates a file called "README" in your Hello-World directory</span>
+<span class="preprocessor"># 创建自述文件</span>
+</pre></td></tr></table></figure>
+
 <a name="more"></a>
 
-<p><code>Ctrl+/</code>    注释整行 (如已选择内容，同“Ctrl+Shift+/”效果)</p>
-<p><code>Ctrl+Shift+/</code>    注释已选择内容</p>
-<p><code>Ctrl+Space</code>    自动完成 (win 与系统快捷键冲突，需修改)</p>
-<p><code>Ctrl+Z</code>    撤销</p>
-<p><code>Ctrl+Y</code>    恢复撤销</p>
-<p><code>Ctrl+Shift+V</code>    粘贴并自动缩进 (其它兄弟写的，实测 win 系统自动缩进无效)</p>
-<p><code>Ctrl+M</code>    光标跳至对应的括号</p>
-<p><code>Alt+.</code>    闭合当前标签</p>
-<p><code>Ctrl+Shift+A</code>    选择光标位置父标签对儿</p>
-<p><code>Ctrl+Shift+[</code>    折叠代码</p>
-<p><code>Ctrl+Shift+]</code>    展开代码</p>
-<p><code>Ctrl+KT</code>    折叠属性</p>
-<p><code>Ctrl+KO</code>    展开所有</p>
-<p><code>Ctrl+U</code>    软撤销 <a href="http://www.sublimetext.com/forum/viewtopic.php?f=2&amp;t=641">1</a>,<a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
-<blockquote>
-<p>软撤销:soft_undo</p>
-<p>Undoes each action stepping through granular edits. </p>
-<p>先移动到编辑位置再进行撤销操作。</p>
-</blockquote>
-<p><code>Ctrl+Shift+U</code> 软重做 <a href="https://sublime-text.readthedocs.org/en/latest/reference/commands.html">2</a>,<a href="https://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/commands.html">3</a></p>
-<blockquote>
-<p>软重做:soft_redo </p>
-<p>Redoes each action stepping through granular edits. </p>
-<p>先移动到编辑位置再进行重做操作。</p>
-</blockquote>
-<p><code>Ctrl+T</code>    词互换</p>
-<p><code>Ctrl+Enter</code>    插入行后</p>
-<p><code>Ctrl+Shift Enter</code>    插入行前</p>
-<p><code>Ctrl+K Backspace</code>    从光标处删除至行首</p>
-<p><code>Ctrl+Shift+UP</code>    与上行互换</p>
-<p><code>Ctrl+Shift+DOWN</code>    与下行互换</p>
-<p><code>Shift+Tab</code>    去除缩进</p>
-<p><code>Tab</code>    缩进</p>
-<p><code>F9</code>    行排序 (按 a-z)</p>
-<h2>常用插件</h2>
-<p><strong><a href="http://emmet.io">Emmet</a></strong>:HTML 编辑神器</p>
-<p><strong><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></strong>: 快速编写 javaScript 注释</p>
-<p><strong><a href="http://wbond.net/sublime_packages/prefixr">Prefixr</a></strong>: 写 CSS 可自动添加 -webkit 等私有词缀</p>
-<p><strong><a href="https://github.com/rmaksim/Sublime-Text-2-Goto-CSS-Declaration">Goto-CSS-Declaration</a></strong>: 导航 CSS 定义位置</p>
-<p><strong><a href="http://wbond.net/sublime_packages/alignment">Alignment</a></strong>: 代码对齐</p>
-<p><strong><a href="http://csscomb.com">CSScomb</a></strong>:CSS 格式化</p>
-<p><strong><a href="https://github.com/SublimeText/Tag">Tag</a></strong>:HTML 格式化</p>
-<p><strong><a href="https://github.com/jdc0589/JsFormat">JsFormat</a></strong>:javaScript 格式化</p>
-<p><strong><a href="https://github.com/dzhibas/SublimePrettyJson">Pretty JSON</a></strong>:JSON 格式化</p>
-<p><strong><a href="https://github.com/kemayo/sublime-text-2-clipboard-history">Clipboard History</a></strong>: 剪切板历史</p>
-<p><strong><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBarEnhancements</a></strong>: 侧栏右键功能增强</p>
-<p><strong><a href="https://github.com/atadams/Hex-to-HSL-Color">Hex-to-HSL-Color-Converter</a></strong>: 自动转换颜色值，从 16 进制到 HSL 格式</p>
+<p>3 提交文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>$ git add README
+<span class="preprocessor"># Stages your README file, adding it to the list of files to be committed</span>
+<span class="preprocessor"># 生成快照并存入项目索引</span>
+
+$ git commit -m <span class="string">'first commit'</span>
+<span class="preprocessor"># Commits your files, adding the message "first commit"</span>
+<span class="preprocessor"># 提交项目索引, 并添加注释（-m 必须有的，后面的值可以为空，即''）</span>
+</pre></td></tr></table></figure>
+
+<p>4 推送并更新远程仓库</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>$ git remote add origin https:<span class="comment">//github.com/username/Hello-World.git</span>
+<span class="preprocessor"># Creates a remote named "origin" pointing at your GitHub repository</span>
+<span class="preprocessor"># 创建远程，并命名 origin 指向你的 GitHub 的库 </span>
+
+$ git push origin master
+<span class="preprocessor"># Sends your commits in the "master" branch to GitHub</span>
+<span class="preprocessor"># 将您在“master”分支提交到 GitHub</span>
+</pre></td></tr></table></figure>
+
 
       
     </div>
@@ -152,13 +162,13 @@
         
   
   <div class="categories">
-    <a href="/categories/tools/">tools</a>
+    <a href="/categories/mac/">mac</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/sublime/">sublime</a>
+    <a href="/tags/git/">git</a>
   </div>
 
         <!-- Baidu Button BEGIN -->
